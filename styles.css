@@ -11,7 +11,6 @@ body{
     margin: auto;
     margin-top: 25vh;
     width: 50vw;
-    
 }
 
 #title{
@@ -34,7 +33,7 @@ body{
     justify-content: space-between;
 }
 
-button{
+.op{
     font-family: 'Roboto Mono', monospace;
     width: 24%;
     font-size: 1.5rem;

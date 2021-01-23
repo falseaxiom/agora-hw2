@@ -16,19 +16,21 @@
                     <input type="text" id="num2" class="num" placeholder="second # here"/>
                 </div>
                 <div class="flexRow">
-                    <button type="submit" onclick="add()" id="add">add</button>
-                    <button type="submit" onclick="sub()" id="sub">subtract</button>
-                    <button type="submit" onclick="mult()"id="mult">multiply</button>
-                    <button type="submit" onclick="divv()"id="divv">divide</button>
+                    <button type="submit" onclick="add()" id="add" class="op">add</button>
+                    <button type="submit" onclick="sub()" id="sub" class="op">subtract</button>
+                    <button type="submit" onclick="mult()"id="mult" class="op">multiply</button>
+                    <button type="submit" onclick="divv()"id="divv" class="op">divide</button>
                 </div>
                 <input type="text" id="ans" placeholder="ur answer will appear here!"/>
             </div>
         </div>
         <script>
+            // op variables
             let num1 = document.getElementById("num1");
             let num2 = document.getElementById("num2");
             let ans = document.getElementById("ans");
 
+            // operations
             function add() {
                 if (num1.value == "" || num2.value == "") {
                     ans.value = "two numbers pls";
@@ -36,21 +38,19 @@
                 else if (!isNaN(num1.value) && !isNaN(num2.value)) {
                     ans.value = parseFloat(num1.value) + parseFloat(num2.value);
                 } else {
-                    ans.value = "numbers only fools!!!";
+                    ans.value = "numbers only!!!";
                 }
             }
-
             function sub() {
                 if (num1.value == "" || num2.value == "") {
-                    ans.value = "two numbers pls";
+                    ans.value = "numbers only pls";
                 } 
                 else if (!isNaN(num1.value) && !isNaN(num2.value)) {
                     ans.value = parseFloat(num1.value) - parseFloat(num2.value);
                 } else {
-                    ans.value = "numbers only fools!!!";
+                    ans.value = "numbers only!!!";
                 }
             }
-
             function mult() {
                 if (num1.value == "" || num2.value == "") {
                     ans.value = "two numbers pls";
@@ -58,10 +58,9 @@
                 else if (!isNaN(num1.value) && !isNaN(num2.value)) {
                     ans.value = parseFloat(num1.value) * parseFloat(num2.value);
                 } else {
-                    ans.value = "numbers only fools!!!";
+                    ans.value = "numbers only!!!";
                 }
             }
-
             function divv() {
                 if (num1.value == "" || num2.value == "") {
                     ans.value = "two numbers pls";
@@ -69,10 +68,9 @@
                 else if (!isNaN(num1.value) && !isNaN(num2.value)) {
                     ans.value = (parseFloat(num1.value) / parseFloat(num2.value));
                 } else {
-                    ans.value = "numbers only fools!!!";
+                    ans.value = "numbers only!!!";
                 }
             }
-
         </script>
     </body>
 </html>
